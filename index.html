@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+  </head>
+  <title>boAt website Clone using tailwind</title>
+  <body>
+    <!-- NavBar Section -->
+    <div class="h-[35px] text-[12px] pt-2 text-center bg-gray-100">
+      Get additional 5% off on Prepaid orders| Code: BOATVIBE |
+      <a htef="#" class="underline">Shop Now</a>
+    </div>
+
+    <nav
+      class="h-[80px] flex justify-between items-center border-b-1 border-gray-400"
+    >
+      <div class="flex">
+        <button onclick="handle1()" class="pl-4 md:hidden">
+          <i class="fa-solid fa-bars text-[20px]"></i>
+        </button>
+        <img
+          class="h-8 md:h-10 relative left-[30px] md:left-[70px]"
+          src="assest/boAt_logo_black_24889e30-925c-4185-a028-9fef497a8e44.svg"
+        />
+      </div>
+
+      <div
+        id="toggleBtn"
+        class="w-full transform translate-[-110%] md:translate-0"
+      >
+        <ul
+          class="bg-gray-200 md:bg-transparent flex flex-col md:flex-row relative top-[235px] md:top-0 right-[80px] md:left-[90px] gap-5 text-[18px] p-2 md:items-center"
+        >
+          <li
+            class="m-3 md:m-0 border-b-1 pb-2 md:pb-0 hover:font-bold transition md:border-0"
+          >
+            <select>
+              <option>Categories</option>
+              <option>A</option>
+              <option>B</option>
+              <option>C</option>
+              <option>D</option>
+            </select>
+          </li>
+          <li
+            class="m-3 md:m-0 border-b-1 pb-2 md:pb-0 hover:font-bold transition md:border-0"
+          >
+            boAt Personalization
+          </li>
+          <li
+            class="m-3 md:m-0 border-b-1 pb-2 md:pb-0 hover:font-bold transition md:border-0"
+          >
+            Corporate Order
+          </li>
+          <li
+            class="m-3 md:m-0 border-b-1 pb-2 md:pb-0 hover:font-bold transition md:border-0"
+          >
+            Gifiting Store
+          </li>
+          <li
+            class="m-3 md:m-0 border-b-1 pb-2 md:pb-0 hover:font-bold transition md:border-0"
+          >
+            <select>
+              <option>More</option>
+              <option>A</option>
+              <option>B</option>
+              <option>C</option>
+              <option>D</option>
+            </select>
+          </li>
+        </ul>
+      </div>
+
+      <div class="pr-[15px] md:pr-[40px] flex">
+        <i
+          class="fa-solid fa-magnifying-glass text-[20px] md:relative md:left-[28px] md:top-2"
+        ></i>
+        <input
+          type="search"
+          placeholder="search items"
+          class="hidden md:block w-[250px] rounded-[40px] bg-gray-100 pl-[35px] pr-[10px] pt-1 pb-1 placeholder:text-[16px] text-[17px]"
+        />
+        <i class="fa-solid fa-user ml-3 md:ml-4 text-[23px]"></i>
+        <i class="fa-solid fa-bag-shopping ml-3 md:ml-4 text-[23px]"></i>
+      </div>
+    </nav>
+
+    <div>
+      <img
+        class="w-full h-[300px] contain md:h-auto"
+        src="https://www.boat-lifestyle.com/cdn/shop/files/Artboard_1_f96ab25c-d2ee-4140-9633-d688648cc48d_1440x.png?v=1750144400"
+      />
+    </div>
+
+    <div class="grid grid-cols-4 gap-6 overflow-hidden bg-green-50 h-auto p-3">
+      <div class="flex flex-col md:flex-row ml-6 md:ml-20 items-center">
+        <img class="h-12" src="assest/jshf_2-01-final-01_small.svg" />
+        <div class="flex flex-col">
+          <p class="text-[14px]">12+3 Months</p>
+          <p class="text-[10px]">Warranty</p>
+        </div>
+      </div>
+
+      <div class="flex flex-col md:flex-row ml-6 md:ml-14 items-center">
+        <img class="h-12" src="assest/Group_334302_small.svg" />
+        <div class="flex flex-col">
+          <p class="text-[14px]">GST</p>
+          <p class="text-[10px]">Billing</p>
+        </div>
+      </div>
+
+      <div class="flex flex-col md:flex-row ml-6 md:ml-14 items-center">
+        <img class="h-12" src="assest/Group_334303_small.svg" />
+        <div class="flex flex-col">
+          <p class="text-[14px]">Free Express</p>
+          <p class="text-[10px]">Delivery*</p>
+        </div>
+      </div>
+
+      <div class="flex flex-col md:flex-row ml-6 md:ml-14 items-center">
+        <img class="h-12" src="assest/Group_334304_small.svg" />
+        <div class="flex flex-col">
+          <p class="text-[14px]">7 days</p>
+          <p class="text-[10px]">Replacement</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-xl md:text-2xl font-semibold m-4 md:m-5">
+      Sales is Live
+    </div>
+
+    <div
+      class="w-full h-auto grid grid-cols-1 content-center place-items-center md:ml-0 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-5 md:gap-4 p-2 md:p-7 overflow-hidden md:mr-6"
+    >
+      <div class="border-1 border-gray-400 h-[270px] w-[195px] rounded-[12px]">
+        <div
+          class="relative z-50 flex gap-1 items-center w-fit bg-black rounded-r rounded-tl-[12px]"
+        >
+          <i
+            class="fa-solid fa-universal-access pl-1 text-[8px] text-white"
+          ></i>
+          <p class="text-[8px] text-white pt-1 pb-1 pr-2">New Launch</p>
+        </div>
+        <img
+          class="z-1 w-full h-[140px] relative bottom-[20px] rounded-t-[12px]"
+          src="assest/AD_311_Pro.webp"
+        />
+
+        <div
+          class="bg-amber-300 flex justify-between items-center p-1 relative bottom-[20px] rounded-b-[5px]"
+        >
+          <p class="text-[9px] font-bold">50 Hours Playback</p>
+          <div
+            class="bg-gray-100 flex items-center gap-1 border-1 rounded pl-[2px] pr-[2px]"
+          >
+            <i class="fa-solid fa-star text-[10px] text-yellow-300"></i>
+            <p class="text-[10px]">4.6</p>
+          </div>
+        </div>
+        <h1 class="font-bold p-1 relative bottom-[20px] text-[14px]">
+          boAt Airdropes 311 PRO
+        </h1>
+        <div class="border-t-1 border-gray-400 relative bottom-[10px]">
+          <h2 class="pl-1 font-bold">₹899</h2>
+          <div class="flex gap-1 items-center">
+            <h3 class="p-1 text-[12px] line-through">₹4900</h3>
+            <p class="text-[12px] text-green-800 font-bold">82% off</p>
+          </div>
+          <div
+            class="flex items-center gap-1 relative bottom-[40px] left-[150px]"
+          >
+            <i class="fa-solid fa-circle text-[13px] text-gray-500"></i>
+            <p class="text-[13px] text-gray-500">+2</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="border-1 border-gray-400 h-[270px] w-[195px] rounded-[12px]">
+        <div
+          class="relative z-50 flex gap-1 items-center w-fit bg-black rounded-r rounded-tl-[12px]"
+        >
+          <i
+            class="fa-solid fa-universal-access pl-1 text-[8px] text-white"
+          ></i>
+          <p class="text-[8px] text-white pt-1 pb-1 pr-2">Trending</p>
+        </div>
+        <img
+          class="z-1 w-full h-[140px] relative bottom-[20px] rounded-t-[12px]"
+          src="assest/boAt-Rockerz-235-Pro.webp"
+        />
+
+        <div
+          class="bg-amber-300 flex justify-between items-center p-1 relative bottom-[20px] rounded-b-[5px]"
+        >
+          <p class="text-[9px] font-bold">50 Hours Playback</p>
+          <div
+            class="bg-gray-100 flex items-center gap-1 border-1 rounded pl-[2px] pr-[2px]"
+          >
+            <i class="fa-solid fa-star text-[10px] text-yellow-300"></i>
+            <p class="text-[10px]">4.9</p>
+          </div>
+        </div>
+        <h1 class="font-bold p-1 relative bottom-[20px] text-[14px]">
+          boAt Rockerz 235 PRO
+        </h1>
+        <div class="border-t-1 border-gray-400 relative bottom-[10px]">
+          <h2 class="pl-1 font-bold">₹899</h2>
+          <div class="flex gap-1 items-center">
+            <h3 class="p-1 text-[12px] line-through">₹1900</h3>
+            <p class="text-[12px] text-green-800 font-bold">55% off</p>
+          </div>
+          <div
+            class="flex items-center gap-1 relative bottom-[40px] left-[150px]"
+          >
+            <i class="fa-solid fa-circle text-[13px] text-gray-500"></i>
+            <p class="text-[13px] text-gray-500">+2</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="border-1 border-gray-400 h-[270px] w-[195px] rounded-[12px]">
+        <div
+          class="relative z-50 flex gap-1 items-center w-fit bg-black rounded-r rounded-tl-[12px]"
+        >
+          <i
+            class="fa-solid fa-universal-access pl-1 text-[8px] text-white"
+          ></i>
+          <p class="text-[8px] text-white pt-1 pb-1 pr-2">New Launch</p>
+        </div>
+        <img
+          class="z-1 w-full h-[140px] relative bottom-[20px] rounded-t-[12px]"
+          src="assest/st_call_3_plus_1.webp"
+        />
+
+        <div
+          class="bg-amber-300 flex justify-between items-center p-1 relative bottom-[20px] rounded-b-[5px]"
+        >
+          <p class="text-[9px] font-bold">BT calling</p>
+          <div
+            class="bg-gray-100 flex items-center gap-1 border-1 rounded pl-[2px] pr-[2px]"
+          >
+            <i class="fa-solid fa-star text-[10px] text-yellow-300"></i>
+            <p class="text-[10px]">5.0</p>
+          </div>
+        </div>
+        <h1 class="font-bold p-1 relative bottom-[20px] text-[14px]">
+          boAt Storm Call 3 Plus
+        </h1>
+        <div class="border-t-1 border-gray-400 relative bottom-[10px]">
+          <h2 class="pl-1 font-bold">₹1499</h2>
+          <div class="flex gap-1 items-center">
+            <h3 class="p-1 text-[12px] line-through">₹7499</h3>
+            <p class="text-[12px] text-green-800 font-bold">81% off</p>
+          </div>
+          <div
+            class="flex items-center gap-1 relative bottom-[40px] left-[150px]"
+          >
+            <i class="fa-solid fa-circle text-[13px] text-gray-500"></i>
+            <p class="text-[13px] text-gray-500">+5</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="border-1 border-gray-400 h-[270px] w-[195px] rounded-[12px]">
+        <div
+          class="relative z-50 flex gap-1 items-center w-fit bg-black rounded-r rounded-tl-[12px]"
+        >
+          <i
+            class="fa-solid fa-universal-access pl-1 text-[8px] text-white"
+          ></i>
+          <p class="text-[8px] text-white pt-1 pb-1 pr-2">Trending</p>
+        </div>
+        <img
+          class="z-1 w-full h-[140px] relative bottom-[20px] rounded-t-[12px]"
+          src="assest/1_fdcbadf5-5d2d-4ce3-9018-ee3e535fb60b.webp"
+        />
+
+        <div
+          class="bg-amber-300 flex justify-between items-center p-1 relative bottom-[20px] rounded-b-[5px]"
+        >
+          <p class="text-[9px] font-bold">12 Hours Playback</p>
+          <div
+            class="bg-gray-100 flex items-center gap-1 border-1 rounded pl-[2px] pr-[2px]"
+          >
+            <i class="fa-solid fa-star text-[10px] text-yellow-300"></i>
+            <p class="text-[10px]">4.8</p>
+          </div>
+        </div>
+        <h1 class="font-bold p-1 relative bottom-[20px] text-[14px]">
+          boAt Stone 350
+        </h1>
+        <div class="border-t-1 border-gray-400 relative bottom-[10px]">
+          <h2 class="pl-1 font-bold">₹1799</h2>
+          <div class="flex gap-1 items-center">
+            <h3 class="p-1 text-[12px] line-through">₹3490</h3>
+            <p class="text-[12px] text-green-800 font-bold">48% off</p>
+          </div>
+          <div
+            class="flex items-center gap-1 relative bottom-[40px] left-[150px]"
+          >
+            <i class="fa-solid fa-circle text-[13px] text-gray-500"></i>
+            <p class="text-[13px] text-gray-500">+1</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="border-1 border-gray-400 h-[270px] w-[195px] rounded-[12px]">
+        <div
+          class="relative z-50 flex gap-1 items-center w-fit bg-black rounded-r rounded-tl-[12px]"
+        >
+          <i
+            class="fa-solid fa-universal-access pl-1 text-[8px] text-white"
+          ></i>
+          <p class="text-[8px] text-white pt-1 pb-1 pr-2">Best Seller</p>
+        </div>
+        <img
+          class="z-1 w-full h-[140px] relative bottom-[20px] rounded-t-[12px]"
+          src="assest/LR_d8741870-118f-4524-a3c2-8f4dc0d2f72d.webp"
+        />
+
+        <div
+          class="bg-amber-300 flex justify-between items-center p-1 relative bottom-[20px] rounded-b-[5px]"
+        >
+          <p class="text-[9px] font-bold">60 Hours Playback</p>
+          <div
+            class="bg-gray-100 flex items-center gap-1 border-1 rounded pl-[2px] pr-[2px]"
+          >
+            <i class="fa-solid fa-star text-[10px] text-yellow-300"></i>
+            <p class="text-[10px]">4.8</p>
+          </div>
+        </div>
+        <h1 class="font-bold p-1 relative bottom-[20px] text-[14px]">
+          boat Rockerz 450 PRO
+        </h1>
+        <div class="border-t-1 border-gray-400 relative bottom-[10px]">
+          <h2 class="pl-1 font-bold">₹1699</h2>
+          <div class="flex gap-1 items-center">
+            <h3 class="p-1 text-[12px] line-through">₹3990</h3>
+            <p class="text-[12px] text-green-800 font-bold">57% off</p>
+          </div>
+          <div
+            class="flex items-center gap-1 relative bottom-[40px] left-[150px]"
+          >
+            <i class="fa-solid fa-circle text-[13px] text-gray-500"></i>
+            <p class="text-[13px] text-gray-500">+2</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="border-1 border-gray-400 h-[270px] w-[195px] rounded-[12px]">
+        <div
+          class="relative z-50 flex gap-1 items-center w-fit bg-black rounded-r rounded-tl-[12px]"
+        >
+          <i
+            class="fa-solid fa-universal-access pl-1 text-[8px] text-white"
+          ></i>
+          <p class="text-[8px] text-white pt-1 pb-1 pr-2">Best Seller</p>
+        </div>
+        <img
+          class="z-1 w-full h-[140px] relative bottom-[20px] rounded-t-[12px]"
+          src="assest/wave_sigma_3_co.webp"
+        />
+
+        <div
+          class="bg-amber-300 flex justify-between items-center p-1 relative bottom-[20px] rounded-b-[5px]"
+        >
+          <p class="text-[9px] font-bold">BT Calling</p>
+          <div
+            class="bg-gray-100 flex items-center gap-1 border-1 rounded pl-[2px] pr-[2px]"
+          >
+            <i class="fa-solid fa-star text-[10px] text-yellow-300"></i>
+            <p class="text-[10px]">4.5</p>
+          </div>
+        </div>
+        <h1 class="font-bold p-1 relative bottom-[20px] text-[14px]">
+          boat Wave Sigma 3
+        </h1>
+        <div class="border-t-1 border-gray-400 relative bottom-[10px]">
+          <h2 class="pl-1 font-bold">₹.1499</h2>
+          <div class="flex gap-1 items-center">
+            <h3 class="p-1 text-[12px] line-through">₹8999</h3>
+            <p class="text-[12px] text-green-800 font-bold">81% off</p>
+          </div>
+          <div
+            class="flex items-center gap-1 relative bottom-[40px] left-[150px]"
+          >
+            <i class="fa-solid fa-circle text-[13px] text-gray-500"></i>
+            <p class="text-[13px] text-gray-500">+5</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr />
+
+    <div class="text-xl md:text-2xl font-semibold m-5">Shop by LiyeStyle</div>
+
+    <div
+      class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-2 md:p-9"
+    >
+      <img
+        class="h-[260px] md:h-[450px]"
+        src="assest/jemmi_d1dd51d5-8b8b-47ad-9920-f8594669cbb2.webp"
+      />
+      <img class="h-[260px] md:h-[450px]" src="assest/Ranveer.webp" />
+      <img class="h-[260px] md:h-[450px]" src="assest/Aman.webp" />
+      <img class="h-[260px] md:h-[450px]" src="assest/YJ.webp" />
+    </div>
+
+    <footer
+      class="grid grid-cols-1 lg:grid-cols-2 lg:grid-[30%_auto] bg-gray-100 mt-7"
+    >
+      <div class="flex justify-center flex-col">
+        <img
+          class="h-[100px] mt-4"
+          src="assest/boAt_logo_black_24889e30-925c-4185-a028-9fef497a8e44.svg"
+        />
+        <p class="text-xl md:text-2xl font-semibold m-2 text-center">
+          Subscribe to our email alerts!
+        </p>
+      </div>
+      <div class="flex justify-around gap-4 mt-7 m-6 flex-wrap">
+        <ul>
+          <li class="font-bold"><a href="">Shop</a></li>
+          <li class="text-[18px]"><a href="">True</a></li>
+          <li class="text-[18px]"><a href="">Wireless</a></li>
+          <li class="text-[18px]"><a href="">EarbudsWireless</a></li>
+          <li class="text-[18px]"><a href="">HeadphonesWired</a></li>
+          <li class="text-[18px]"><a href="">HeadphonesWireless</a></li>
+        </ul>
+
+        <ul>
+          <li class="font-bold"><a href="">Shop</a></li>
+          <li class="text-[18px]"><a href="">True</a></li>
+          <li class="text-[18px]"><a href="">Wireless</a></li>
+          <li class="text-[18px]"><a href="">EarbudsWireless</a></li>
+          <li class="text-[18px]"><a href="">HeadphonesWired</a></li>
+          <li class="text-[18px]"><a href="">HeadphonesWireless</a></li>
+        </ul>
+
+        <ul>
+          <li class="font-bold"><a href="">Shop</a></li>
+          <li class="text-[18px]"><a href="">True</a></li>
+          <li class="text-[18px]"><a href="">Wireless</a></li>
+          <li class="text-[18px]"><a href="">EarbudsWireless</a></li>
+          <li class="text-[18px]"><a href="">HeadphonesWired</a></li>
+          <li class="text-[18px]"><a href="">HeadphonesWireless</a></li>
+        </ul>
+      </div>
+    </footer>
+
+    <script>
+      let a = document.getElementById("toggleBtn");
+
+      function handle1() {
+        a.classList.toggle("translate-[0px]");
+        console.log("hello");
+      }
+    </script>
+  </body>
+</html>
